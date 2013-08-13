@@ -39,6 +39,3 @@ class Trie {
     }
 }
 ```
-
-Commit summary: Extended description: (optional)
-gratianlup gratianlup@outlook.com
