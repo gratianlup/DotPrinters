@@ -6,7 +6,7 @@ Dot Printers
 Simple helpers for generating [Graphviz](http://www.graphviz.org/) DOT files in various programming languages.  
 Currently includes generators for C, C++, Java, Python and C#.
   
-The generators are very simple, definining a series of shapes and colors and two main functions: *create shape* and *link two shapes*. The shape type, label and color can be customized, while for the link the color, line width, pattern and label can be customized.
+The generators are very simple, definining a series of shapes and colors and two main functions: *create shape* and *link two shapes*. The shape type, label and color can be customized, while for the link the color, line width, pattern and label can be customized.  
   
 #### Example of printing a [Trie](http://en.wikipedia.org/wiki/Trie) in Java.
 
@@ -38,4 +38,6 @@ class Trie {
         printer.endGraph();
     }
 }
-```
+```  
+
+A good, cross-platform viewer for DOT files is [ZGRView](http://zvtm.sourceforge.net/zgrviewer.html) - it requires the [JRE](http://www.oracle.com/technetwork/java/javase/downloads/index.html) to be installed.
