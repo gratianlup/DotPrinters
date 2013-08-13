@@ -1,4 +1,4 @@
-Dot Printers
+DOT Printers
 ============
 
 #### Source code will be released in the near future.   
