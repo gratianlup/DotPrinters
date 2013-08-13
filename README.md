@@ -3,7 +3,7 @@ Dot Printers
 
 #### Source code will be released in the near future.   
   
-Simple helpers for generating Graphviz DOT files in various programming languages.  
+Simple helpers for generating [Graphviz](http://www.graphviz.org/) DOT files in various programming languages.  
 Currently includes generators for C, C++, Java, Python and C#.
   
   
@@ -21,7 +21,7 @@ class Trie {
                                                      DotPrinter.Color.Blue;
         printer.createNode(this, "", DotPrinter.Shape.Circle, shapeColor);
         
-        // Recoursively create shapes for all child nodes  
+        // Recursively create shapes for all child nodes  
         // and link them to the current shape.
         for(Map.Entry<Character, Trie> entry : children.entrySet()) {
             printToDOT(entry.getValue());
