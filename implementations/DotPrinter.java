@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DotPrinter {
+    // The colors that can be used for shapes and lines.
     public static enum Color {
         Black,
         Gray,
@@ -14,6 +15,7 @@ public class DotPrinter {
         Blue
     }
 
+    // The form that a shape can take.
     public static enum Shape {
         Rectangle,
         Square,
@@ -68,6 +70,7 @@ public class DotPrinter {
         }
         catch(Exception ex) {
             System.out.println("Failed to write to DOT file.");
+            ex.printStackTrace();
         }
     }
 
@@ -103,8 +106,22 @@ public class DotPrinter {
 
     public void createLink(Object sourceObject, Object destObject,
                            String label, Color color, int penWidth, boolean dotted) {
-        int nodeA = objectIds.get(sourceObject);
-        int nodeB = objectIds.get(destObject);
+        if(sourceObject == null) {
+            throw new IllegalArgumentException("Link source object not specified!");
+        }
+        else if(destObject == null) {
+            throw new IllegalArgumentException("Link destination object not specified!");
+        }
+
+        Integer nodeA = objectIds.get(sourceObject);
+        Integer nodeB = objectIds.get(destObject);
+
+        if(nodeA == null) {
+            throw new IllegalArgumentException("Link source object shape not found!");
+        }
+        else if(nodeB == null) {
+            throw new IllegalArgumentException("Link destination object shape not found!");
+        }
 
         write(String.format("n%d -> n%d", nodeA, nodeB));
         write(String.format("[label=\"%s\", fontsize=12, labeldistance=10", label));
