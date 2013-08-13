@@ -1,7 +1,7 @@
 DOT Printers
 ============
 
-#### Source code will be released in the near future.   
+#### Source code for all languages will be released in the near future.   
   
 Simple helpers for generating [Graphviz](http://www.graphviz.org/) DOT files in various programming languages.  
 Currently includes generators for C, C++, Java, Python and C#.
