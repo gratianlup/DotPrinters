@@ -17,7 +17,8 @@ class Trie {
     Map<Character, Trie> children;
     
     private void printToDOT(DotPrinter printer) {
-        // Create a shape for the current node.
+        // Create a shape for the current node
+        // (terminators are red, all other nodes are blue).
         DotPrinter.Color shapeColor = isTerminator ? DotPrinter.Color.Red : 
                                                      DotPrinter.Color.Blue;
         printer.createNode(this, "", DotPrinter.Shape.Circle, shapeColor);
