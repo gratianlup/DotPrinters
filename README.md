@@ -25,7 +25,7 @@ class Trie {
         // Recursively create shapes for all child nodes  
         // and link them to the current shape.
         for(Map.Entry<Character, Trie> entry : children.entrySet()) {
-            printToDOT(entry.getValue());
+            entry.getValue().printToDOT(printer);
             printer.createLink(this, entry.getValue(), String.valueOf(entry.getKey()));
         }
     }
